@@ -3,6 +3,7 @@ import React from "react";
 import Titulo from "../Titulo";
 import Conta from "../Conta";
 import styled from "styled-components";
+import Extrato from "../Extrato";
 
 const Container = styled.div`
   background-color: #f1f1f1;
@@ -14,6 +15,10 @@ const Conteudo = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export default () => {
@@ -22,9 +27,8 @@ export default () => {
       <Titulo>Thiago Miziara</Titulo>
       <Conteudo>
         <Conta />
+        <Extrato/>
       </Conteudo>
     </Container>
   );
 };
-
-
